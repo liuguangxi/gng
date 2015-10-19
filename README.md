@@ -1,4 +1,4 @@
-Gaussian Noise Generator (GNG) IP Core
+Gaussian Noise Generator (GNG) Verilog IP Core
 ==================================================
 
 
