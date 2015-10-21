@@ -26,4 +26,4 @@ Directory organization
 
 Author
 ----------------------------------------
-Guangxi Liu <guangxi.liu (at) opencores.org>
+Guangxi Liu (guangxi.liu (at) opencores.org)
