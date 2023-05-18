@@ -31,7 +31,7 @@
 
 
 /* Coefficients table */
-static const long C0[248] = {
+static const int C0[248] = {
     11049, 8007, 5220, 2577, 18846, 16547, 14535, 12721, 25134, 23229,
     21594, 20150, 30518, 28863, 27458, 26231, 35288, 33808, 32562, 31479,
     39608, 38260, 37130, 36152, 43582, 42336, 41296, 40399, 47277, 46115,
@@ -59,7 +59,7 @@ static const long C0[248] = {
     146277, 145872, 145540, 145259, 150000, 148769, 147528, 146797
 };
 
-static const long C1[248] = {
+static const int C1[248] = {
     -102514, -92199, -86162, -82951, -79070, -68105, -60693, -55396, -66134, -55839,
     -48783, -43639, -57755, -48215, -41670, -36890, -51803, -42932, -36856, -32421,
     -47313, -39012, -33338, -29203, -43778, -35964, -30631, -26751, -40907, -33511,
@@ -87,7 +87,7 @@ static const long C1[248] = {
     0, 0, 0, 0, 0, 0, 0, 0
 };
 
-static const long C2[248] = {
+static const int C2[248] = {
     83840, 48883, 25920, 8147, 88988, 59916, 42707, 31577, 83526, 57019,
     41464, 31523, 77411, 52885, 38533, 29386, 71990, 49106, 35743, 27241,
     67363, 45865, 33332, 25372, 63422, 43107, 31282, 23780, 60040, 40746,
@@ -117,14 +117,14 @@ static const long C2[248] = {
 
 
 /* Calculate Inverse of the normal CDF */
-long icdf(unsigned long long n)
+int icdf(unsigned long long n)
 {
     unsigned long long t;
     int i;
     unsigned num_lzd;
     unsigned addr;
-    long c0, c1, c2;
-    long x;
+    int c0, c1, c2;
+    int x;
     long long y;
     int carry;
 
@@ -172,5 +172,5 @@ long icdf(unsigned long long n)
     if (n & 1ULL)
         y = -y;
 
-    return (long)y;
+    return (int)y;
 }

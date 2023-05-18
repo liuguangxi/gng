@@ -44,7 +44,7 @@ typedef struct {
 unsigned long long taus_get(taus_state_t *state);
 
 /* Set state using seed */
-void taus_set(taus_state_t *state, unsigned long s);
+void taus_set(taus_state_t *state, unsigned s);
 
 
 #ifdef __cplusplus

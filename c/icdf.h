@@ -35,7 +35,7 @@ extern "C" {
 #endif
 
 /* Calculate Inverse of the normal CDF */
-long icdf(unsigned long long x);
+int icdf(unsigned long long x);
 
 
 #ifdef __cplusplus

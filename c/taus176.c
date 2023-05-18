@@ -22,8 +22,8 @@
  * along with this source; if not, download it from
  * http://www.opencores.org/lgpl.shtml
  */
- 
- 
+
+
 #include "taus176.h"
 
 
@@ -31,14 +31,14 @@
 unsigned long long taus_get(taus_state_t *state)
 {
     unsigned long long b;
-    
+
     b = (((state->z1 << 5) ^ state->z1) >> 39);
     state->z1 = (((state->z1 & 18446744073709551614ULL) << 24) ^ b);
     b = (((state->z2 << 19) ^ state->z2) >> 45);
     state->z2 = (((state->z2 & 18446744073709551552ULL) << 13) ^ b);
     b = (((state->z3 << 24) ^ state->z3) >> 48);
     state->z3 = (((state->z3 & 18446744073709551104ULL) << 7) ^ b);
-    
+
     return (state->z1 ^ state->z2 ^ state->z3);
 }
 
@@ -46,17 +46,17 @@ unsigned long long taus_get(taus_state_t *state)
 /* Set state using seed */
 #define LCG(n) (4294967291ULL * n)
 
-void taus_set(taus_state_t *state, unsigned long s)
+void taus_set(taus_state_t *state, unsigned s)
 {
     if (s == 0)    s = 1;    /* default seed is 1 */
-    
+
     state->z1 = LCG(s);
     if (state->z1 < 2ULL)    state->z1 += 2ULL;
     state->z2 = LCG(state->z1);
     if (state->z2 < 64ULL)    state->z2 += 64ULL;
     state->z3 = LCG(state->z2);
     if (state->z3 < 512ULL)    state->z3 += 512ULL;
-    
+
     /* "warm it up" */
     taus_get(state);
     taus_get(state);
