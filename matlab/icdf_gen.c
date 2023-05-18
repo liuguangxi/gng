@@ -44,7 +44,7 @@ void mexFunction(int nlhs, mxArray *plhs[], int nrhs, const mxArray *prhs[])
     /* Local variables */
     unsigned long long *r;
     unsigned len;
-    long *x;
+    int *x;
     unsigned i;
 
     /* Check for proper number of arguments */
@@ -63,7 +63,7 @@ void mexFunction(int nlhs, mxArray *plhs[], int nrhs, const mxArray *prhs[])
 
     /* Assign pointers to the various parameters */
     r = (unsigned long long*)mxGetData(prhs[0]);
-    x = (long*)mxGetData(plhs[0]);
+    x = (int*)mxGetData(plhs[0]);
 
     /* Call function icdf and assign return value */
     for (i = 0; i < len; i++)
