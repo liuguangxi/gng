@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta name="description" content="">
+<meta name="keywords" content="">
+	<title>Noise Gen IP :: www.silicon-pro.com</title>
+	<style type="text/css" media="all">@import "css/main.css";</style>
+    <style type="text/css" media="all">@import "css/navigation.css";</style>
+    
+</head>
+
+<body>
+<div id="Wrapper">
+
+<div id="Header">
+
+<div id="HeaderLogo"><img src="Noise%20Gen%20IP%20%20%20www.silicon-pro.com_files/logo.gif" alt="Silicon-Pro" height="70" width="300"></div>
+
+
+<div id="navigation">
+<ul>
+	<li><a href="http://www.silicon-pro.com/index.html">Homepage</a></li>
+        <li><a href="http://www.silicon-pro.com/oursolutions.html">Solutions</a>
+        <ul>
+        <li><a href="http://www.silicon-pro.com/oursolutionsIP.html" style="width:180px">IP Cores</a></li>
+        <li><a href="http://www.silicon-pro.com/ourservices.html" style="width:180px">ASIC Design Services</a></li>
+        <li><a href="http://www.silicon-pro.com/oursolutionsIscope.html" style="width:180px">InSilicon Instrumentation</a></li>
+        </ul>
+    </li>
+    <li><a href="http://www.silicon-pro.com/products.html">Products</a>
+        <ul>
+        <li><a href="http://www.silicon-pro.com/oursolutionsIP.html" style="width:50px">IP Cores</a></li>
+        <li><a href="http://www.silicon-pro.com/oursolutionsIscope.html" style="width:50px">iScope</a></li>
+        </ul>
+    </li>
+    <li><a href="http://www.silicon-pro.com/ourteam.html">About Us</a></li>
+    <li><a href="http://www.silicon-pro.com/contactus.html">Contact Us</a></li>
+</ul>
+</div>
+</div>
+
+<div id="InteriorImage"><img src="Noise%20Gen%20IP%20%20%20www.silicon-pro.com_files/InteriorTeam.jpg" alt="Silicon-Pro"></div>
+
+<div id="ContentWrapperSecondary">
+<h1>SP3000 10σ Additive White Gaussian Noise (AWGN) Generator</h1>
+
+<p>The SP3000 AWGN core generates white Gaussian noise generator, which 
+can be used to perform BER to extremely low BER levels (~10-15). The 
+SP3000 uses a combination of the Box-Muller algorithm and the central 
+limit theorem. The Box-Muller algorithm generates a unit normal random 
+variable via a transformation of two independent random variables that 
+are uniformly distributed. The outputs of multiple parallel Box-Muller 
+designs are then averaged to obtain a PDF that is Gaussian to up to 10σ.
+ </p>
+<p>The Additive White Gaussian Noise (AWGN) generator is widely used in 
+BERT curve calculation for Forward Error Correction (FEC) IPs. The 
+software-based AWGN generator can take several days or several weeks for
+ the BER curve calculation when reach low bit error rates. Also, the 
+transferring software generated noise sample to the hardware IP is 
+highly inefficient and it can be a performance bottleneck.</p>
+<p>Hardware-based AWGN noise generator offers the speed of BER by 
+several orders of magnitude. It can be connected to the designed IP for 
+BERT curve calculation in the simulation. And also, it can be 
+synthesized and implemented in FPGA with designed IP. In this case, the 
+design IP can be tested in FPGA just like the prototype tested in the 
+lab.</p>
+<!--<p><b>Main Features</b></p>
+<ul>
+	<li>Probability desity function (PDF) deviation is in order of 10-4  and σ can reach 10.59</li>
+    <li>Period of generated noise sequence is ~ 288  = 1025 samples</li>
+    <li>SNR input covers beyond -2.0 dB to 9.0 dB, with resolution below 0.01 db</li>
+    <li>Noise is quantized up to 16 bits with 5 bits of integer and 11 bits of fraction</li>
+    <li>Core returns to initial state upon reset</li>
+    <li>Core can hold on and pause then continue the sequence when Enable pin is de-asserted</li>
+    <li>Maximum clock rate is 70 MHz in VirtexII</li>
+</ul>
+-->
+<p><b>Lab Testing</b></p>
+<p>We tested the hardware noise generator core using the iScope. Testing
+ included two phases, in phase1 the noise generator run freely and the 
+generated data is collected periodically in the iScope readMem. The 
+resulting histogram is shown overlaying the expected Gaussian 
+distribution (log scale is used).</p>
+<p><img src="Noise%20Gen%20IP%20%20%20www.silicon-pro.com_files/noiseGenPerformance.jpg" alt="" height="311" width="652"></p>
+<p>In phase2, only samples &gt; 5σ were written the the iScope readMem, 
+this way the test was speeded up over million times to test the tail end
+ of the noise distribution (log scale is used).</p>
+<p><img src="Noise%20Gen%20IP%20%20%20www.silicon-pro.com_files/noiseGenPerformanceBiggerThan5.jpg" alt="" height="311" width="652"></p>
+
+
+</div>
+
+<div id="SecondaryNav">
+<ul id="Secondary_navlist">
+    <li><a href="http://www.silicon-pro.com/index.html">Homepage</a></li>
+<!--    <li><a href="aboutus.html">about us</a></li> -->    
+    <li><a href="http://www.silicon-pro.com/ourservices.html">Services</a></li>
+    <li><a href="http://www.silicon-pro.com/oursolutions.html">Solutions</a></li>
+    <li><a href="http://www.silicon-pro.com/products.html">Products</a></li>
+    <li><a href="http://www.silicon-pro.com/ourteam.html">About Us</a></li>
+    <li><a href="http://www.silicon-pro.com/contactus.html">Contact Us</a></li>
+</ul>
+</div>
+
+<div id="Footer"><p>© 2009 www.silicon-pro.com. All Rights Reserved.</p></div>
+
+</div>
+
+
+
+
+
+</body></html>
