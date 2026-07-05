@@ -11,7 +11,7 @@ which obtains a PDF that is Gaussian to up to 9.1σ.
 
 ## Directory
 ```
-├── doc/                    Design documents
+├── doc/                    Design and reference documents
 ├── sim                     Simulation files
     ├── modelsim            ModelSim simulation directory
 ├── c                       C codes
